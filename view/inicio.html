@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="../img/icono.ico">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styleIni.css">
+    <script src="../js/funciones.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Configuración</a></li>
+        <li><a href="#">Cuenta</a></li>
+       
+    </ul>
+      
+    </div>
+    
+    <div id="menu-equipos">
+      <div class="boton"> 
+        <a id="abrir" class="abrir-cerrar btnMenu" href="javascript:void(0)" onclick="mostrar()">Menu</a><a id="cerrar" class="abrir-cerrar btnMenu" href="#" onclick="ocultar()">Cerrar</a>
+      </div>
+      <div class="row menu-container pt-2 mt-5 ">
+          <div class="col-1">
+            <a href="#" class="text-1">Equipos </a>
+          </div>
+
+          <div class="col-2">
+            <a href="#" class="text-2">Bayern Munich</a>
+            
+          </div>
+      </div>     
+    </div>
+
+    <div id="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="equipo">
+
+                    <div class="title">
+                        <h1 class="title-text">FC Bayern Munich</h1>
+                        <div class="buttons">
+                            <a href="#" class="fa fa-pencil fa-2x" aria-hidden="true" onclick="swal('¿Desea modificar el nombre de este equipo? ', { buttons: ['Cancelar', true],})"></a>
+                            <a href="#" class="fa fa-trash fa-2x" aria-hidden="true" onclick="swal('¿Estas de acuerdo en eliminar este equipo? ', { buttons: ['Cancelar', true],});"></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info-equipo">
+                    <div class="row "> 
+                        <div class="info-text">
+                            <ul>
+                                <li> <img src="../img/balon.png" /></li>
+                                <li> <h5 >Equipo de futbol</h5> </li>
+                                <li> <i class="fa fa-star fa-2x " aria-hidden="true"><p>4.7 </p></i> </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="info-text">
+                            <ul>
+                               <li><img src="../img/alemania.png" /> </li>  
+                                <li><h5>Múnich, Alemania</h5> </li>
+
+                            </ul>
+                                
+                        </div>
+                    </div>
+
+                    <div class="row info-img">
+                        <div class="col">
+                            <img class="img-esc" src="../img/escudo.png">
+                        </div>
+                        <div class="col">
+                            <img class="img-tecn" src="../img/julian.webp">
+                        </div>
+                    </div>
+                   
+                    <div class="titleInfo">
+                        <h3> Acerca</h3>
+                    </div>
+                    <div class="informacion">
+                        El Bayern de Múnich​​​ es una entidad deportiva profesional de la ciudad de Múnich,
+                        Alemania. Fue fundado el 27 de febrero de 1900 por once jugadores liderados por 
+                        Franz John.​ Es uno de los clubes de mayor prestigio en el mundo, ​ es conocido por 
+                        su sección de fútbol profesional, que participa en la 1. Bundesliga.
+                    </div>
+                    
+                    
+                </div>
+               
+               
+            </div>
+            
+
+
+
+
+            <div class="col-md-4 ">
+
+                <div class="title">
+                    <h1 class="title-text2">Jugadores  del equipo</h1>
+                     <!-- Modal -->
+                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo jugador</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                            <div class="modal-body">
+          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btJugador">Registrar</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="buttons">
+                    <a href="#" class="button-1 fa fa-plus-circle fa-2x" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" ></a>
+                </div>
+                
+            </div>
+            
+            
+
+        </div>
+       
+
+
+        
+        </div>
+    
+        
+        
+    
+        
+</body>
+</html>

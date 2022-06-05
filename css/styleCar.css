@@ -1,0 +1,44 @@
+
+body {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#container{
+    text-align: center;
+    height: 100vh;
+    display:flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items:center ;
+}
+span{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 5.3em;
+  }
+  
+
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+

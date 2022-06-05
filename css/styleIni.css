@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* background-image: url(../img/fondo2.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.sidebar {
+ 
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  /* background-color: #00324b; */
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  transition: 0.4s ease-in;
+}
+
+.sidebar .boton-cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  display: block;
+  padding: 0;
+  line-height: 1.5rem;
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.sidebar ul,
+.sidebar li {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none inside;
+}
+
+.sidebar ul {
+  margin: 4rem auto;
+  display: block;
+  width: 50%;
+  min-width: 200px;
+}
+
+.sidebar a {
+  display: block;
+  font-size: 100%;
+  color: #000;
+  text-decoration: none;
+  padding: 8px;
+  width: 80%;
+}
+
+.sidebar a:hover {
+  color: #fff;
+  background-color: #c8221379;
+  border-radius: 5px;
+  transition: 0.4s ease-in;
+}
+
+h1 {
+  color: #f90;
+  font-size: 180%;
+  font-weight: normal;
+}
+#menu-equipos {
+  transition: ease-in 0.4s;
+  padding: 1rem;
+}
+.boton a {
+  text-decoration: none;
+  color: #a93226;
+  font-weight: bold;
+}
+.boton a:hover {
+  color: #fff;
+  transition: 0.2s ease-in;
+}
+
+.abrir-cerrar {
+  color: #a93226;
+  font-size: 1rem;
+}
+
+#cerrar {
+  display: none;
+}
+.btnMenu {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  /* box-shadow:0 0 30px rgba(0, 0, 0, .568); */
+  transition: 0.5s ease-in;
+  border-radius: 8px;
+}
+.btnMenu:hover {
+  background: #a93226;
+  border: solid 1px #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+}
+.menu-container {
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  /* background-color: #fff; */
+}
+
+.menu-container a {
+  text-decoration: none;
+}
+.menu-container a:hover {
+  color: #000;
+  transition: 0.4s ease-in;
+}
+.text-1 {
+  color: #a93226;
+  font-weight: bold;
+}
+.text-2 {
+  color: rgb(164, 162, 162);
+  font-size: 10pt;
+  font-weight: bold;
+}
+#container {
+  transition: ease-in 0.4s;
+  padding-left: 5.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.title-text {
+  font-weight: 700;
+  color: #000;
+  font-size: 28pt;
+  float: left;
+  
+}
+
+.title-text2 {
+  font-weight: 500;
+  color: #000;
+  font-size: 22pt;
+  float: left;
+}
+.buttons {
+padding-left:40px;
+  display: flex;
+  align-items: center;
+}
+
+.buttons a {
+  color: #a93226;
+  text-decoration: none;
+  margin-left: 12px;
+  margin-top: 5px;
+  float: left;
+}
+
+.buttons a:hover {
+    color: #4f1506;
+    transition: 0.2s ease-in;
+}
+
+.info-equipo {
+  clear: both;
+  /* text-align: left; */
+}
+
+.info-text {
+
+}
+.info-text ul {
+  display: flex;
+  align-items: center;
+}
+.info-text li {
+  display: inline-block;
+  text-decoration: none;
+
+  padding: 4px;
+}
+
+.info-text p,
+h5 {
+  font-size: 20px;
+  display: inline-block;
+  align-items: center;
+  margin: 0;
+}
+.info-text img {
+  width: 30px;
+  height: 30px;
+}
+
+.btJugador {
+  background-color: #a93226;
+  color: #ffffff;
+}
+.btJugador:hover {
+  background-color: #555;
+  color: #ffffff;
+}
+
+.info-img{
+    padding:20px;
+}
+
+.img-esc{
+    width: 300px;
+    height: 300px;
+    
+}
+
+.img-tecn{
+    width: 180px;
+    height: 180px;
+    border-radius:100px;
+    border:8px solid rgb(189, 185, 185);
+    
+}
+
+/* Modify de swal */
+
+.swal-text {
+  font-size: 18px;
+}
+.swal-button--confirm {
+  background-color: #a93226;
+}
+.swal-button--confirm:hover {
+  background-color: #555 !important;
+}
+.swal-button--cancel {
+  color: #fff;
+  background-color: #6c757d;
+  border: 1px solid;
+}
+
+.swal-button--cancel:hover {
+  color: #fff;
+  background-color: #51585e !important;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.titleInfo{
+  font-weight: bold;
+
+}
+.informacion{
+  text-align: justify;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.footer{
+  background-color:#4f1506;
+  height:5%;
+  width:100%;
+}
