@@ -4,37 +4,67 @@
 
 class Conexion{
 
-     public static $conexion;
-     
-     public static function conectar(){
-         $servidor = "localhost";
-         $user = "root";
-         $password = "";
-         $bd = "pruebafront";
-        self::$conexion = new mysqli($servidor, $user, $password, $bd);
+    private $bd = "pruebafront";
+    private $server = "localhost";
+    private $user = "root";
+    private $pass= "";
+    public static $conex;
+
+    public function __construct(){ //Conexion constructor
+        self::$conex = new mysqli($this->server, $this->user, $this->pass, $this->bd);
+        if(!self::$conex){
+            echo "Error:";
+        }else {
+           
+        }
+        
+
     }
 
-    function consulta($mostrar){
+    public function select($dml){ //consulta a la bd
+
         try{
-            $dml = mysqli_query(self::$conexion, $mostrar);
-            $i = 0;
+            $dml = mysqli_query(self::$conex, $dml);
+            $i = 0; 
             while($consulta = mysqli_fetch_array($dml)){
                 $lista[$i] = $consulta;
                 $i++;
             }
             mysqli_free_result($dml);
-
-        }catch(Exception $e){
-            echo "Error";
+        } catch(Exception $e){
+            echo  "Error";
         }
         return $lista;
+    }
+
+    public function desconectar(){
+        if(is_resource(self::$conex)){
+            return self::$conex->close();
+            
+        }
+        return false;
+    }
+
+    public function __destruct(){
+        $this->desconectar();
+        
 
     }
+
+
+
 }
 
-
 $conexion = new Conexion();
-$conexion->conectar();
+$conexion->__construct();
+
+
+
+
+
+
+// $conexion = new Conexion();
+// $conexion->conectar();
 
 // $mostrar = "SELECT * FROM usuarios";
 // $lista = $conexion->consulta($mostrar);

@@ -10,13 +10,20 @@ class controlador extends Conexion{
         } else {
             $dml = "SELECT $campos FROM $tabla;";
         }
-        $lista = parent::consulta($dml);
+        $lista = parent::select($dml);
         return $lista;
     }
 
-    public function insertar(){
-
+    public function insertar($email, $name, $apel, $telef, $pass, $repPass){
+        $sql = "INSERT INTO usuarios VALUES ('$email', '$name', '$apel',  '$telef', '$pass', '$repPass');";
+        $ejecutar = mysqli_query(self::$conex, $sql);
+        return $ejecutar;
     }
+
+    
+
+
+
 }
 
 $con = new controlador();
