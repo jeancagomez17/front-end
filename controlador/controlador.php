@@ -14,11 +14,17 @@ class sentencias extends Conexion{
         return $lista;
     }
 
-    public function insertar($email, $name, $apel, $telef, $pass, $repPass){
-        $sql = "INSERT INTO usuarios VALUES ('$email', '$name', '$apel',  '$telef', '$pass', '$repPass');";
-        $ejecutar = mysqli_query(self::$conex, $sql);
+    public function insertar($datos = array()) {
+
+        foreach ($datos as $key => $value) { //crear un foreach para la creacion y asignacion de valores
+            $$key = $value; // creca una variable con el nombre del valor que trae
+        }
+        $sql = "INSERT INTO usuarios VALUES ('$email', '$name', '$apel',  '$telef', '$pass', '$rePass');"; //Inserta los valores de las variables creadas
+        $ejecutar = mysqli_query(self::$conex, $sql);//enviar los valores
         return $ejecutar;
     }
+
+    
 
 
 }

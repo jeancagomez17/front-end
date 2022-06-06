@@ -72,3 +72,28 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  function agregarDatos(email, nomb, apel, telef, pass, repass){
+      cadena = "correo" + email + 
+      "&nombre " + nomb + 
+      "&apellido" + apel + 
+      "&telefono" + telef + 
+      "&contraseña" + pass +
+      "&reContra" + repass;
+
+      $ajax({
+          type: "POST",
+          url: "../controlador/ejecutar.php",
+          data: cadena,
+          success: function(r){
+              if(r == 1){
+                  alert('Exito');
+
+              }else{
+                  alert('Error');
+              }
+
+          }
+      })
+
+  }

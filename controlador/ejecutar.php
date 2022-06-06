@@ -2,15 +2,18 @@
 require('controlador.php');
 $sen = new sentencias();
 
-$nomb = $_POST['nombre'];
-$email = $_POST['correo'];
-$apel = $_POST['apellido'];
-$pass = $_POST['contraseña'];
-$telef = $_POST['telefono'];
-$resPass = $_POST['repContra'];
+$datos = array(
+    "email" => $_POST['correo'],
+    "name" => $_POST['nombre'],
+    "apel" => $_POST['apellido'],
+    "telef" => $_POST['telefono'],
+    "pass" => $_POST['contraseña'],
+    "rePass" => $_POST['repContra']
+);
+
 
 if(isset($_POST['correo'])){
-    $sen->insertar($email, $nomb, $apel, $telef, $pass, $resPass);
+    $sen->insertar($datos);
     echo "Enviado";
 }
 
