@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,16 @@
     <title>Ejemplo AJAX</title>
     <script src="../js/ajax.js ">
     </script>
-    <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/spin.min.js"></script>
-    <script>
+    <!-- <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"> </script>
+    <!-- <script src="../js/spin.min.js"></script> -->
 
-    </script>
 
 </head>
 
 <body>
-   <form>
+    <form id="Formulario" method="POST">
         <label>Nombre</label>
         <input type="text" name="nombre" id="nombre">
         <label>Apellido</label>
@@ -30,10 +30,25 @@
         <input type="text" name="contraseña" id="contraseña">
         <label>Repetir contraseña</label>
         <input type="text" name="repContra" id="repContra">
-        <input type="button" value="enviar">
+        <input type="button" id="Enviar" name="enviar" value="enviar">
 
-   </form>
-    
+    </form>
+    <div id="respuesta"></div>
+
+
+
 </body>
+<script>
+    $('#Enviar').click(function() {
+        $.ajax({
+            url: '../controlador/ejecutar.php',
+            type: 'POST',
+            data: $('#Formulario').serialize(),
+            success: function(res) {
+                $('#respuesta').html(res)
+            }
+        });
+    });
+</script>
 
 </html>

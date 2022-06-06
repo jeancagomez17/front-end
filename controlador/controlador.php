@@ -1,7 +1,7 @@
 <?php
-require_once('conexion.php');
+require_once('../modelo/conexion.php');
 
-class controlador extends Conexion{
+class sentencias extends Conexion{
 
     public function Mostrar($campos, $condicion, $tabla) {
         $dml = null;
@@ -20,20 +20,7 @@ class controlador extends Conexion{
         return $ejecutar;
     }
 
-    
 
-
-
-}
-
-$con = new controlador();
-$tabla = "usuarios";
-$condicion = " nomb = 'jean' ";
-$lista = $con->Mostrar("nomb", $condicion, $tabla);
-
-for($i = 0; $i < count($lista); $i++){
-   echo $lista[$i]['nomb'];
-//    echo $lista[$i]['apel'];
 }
 
 
