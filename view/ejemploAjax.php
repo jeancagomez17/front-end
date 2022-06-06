@@ -50,5 +50,44 @@
         });
     });
 </script>
+<script>
+
+    let contador = 0;
+    while (contador <= 10) {
+        console.log(contador);
+        contador++;
+    }
+
+    for(let i = 0; i <= 10; i++) {
+        console.log("for" + i);
+
+    }
+
+    let numero = [10,20,30,40,50,60,70,80,90,100];
+
+    for(i=0; i < numero.length; i++) { 
+        console.log(numero[i]);
+    }
+
+    const persona = {
+        nombre:'Jean Carlos',
+        apellido: 'Gomez Quintero',
+        edad:22
+    }
+    for (const propiedad in persona) { //for Para objetos
+        // console.log(propiedad);
+        console.log(`key ${propiedad} - ${persona[propiedad]} `);
+
+        
+    }
+    let cadena = "Hola mundo";
+    for(const caracter of cadena){ //for para arreglos o recorrer cada elemento de una variable
+        console.log(caracter);
+
+    }
+
+
+
+</script>
 
 </html>
